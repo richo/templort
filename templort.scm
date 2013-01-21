@@ -1,18 +1,12 @@
 (use srfi-1)
 ;; Renders template in the current execution environment
-(define render-template
-  (lambda (template #!optional (locals '()))
-            (render-template/locals template locals)))
 
-(define render-template/locals
-  (lambda (template locals)
-    (let ((tpl (load-template template)))
-      (template-eval tpl locals))))
-
-(define load-template
-  (lambda (template-file)
-    (read-file (string-append "views/" template-file))))
-
+(define make-renderer
+  (lambda (view-path)
+    (let ((load-template (lambda (template-file) (read-file (string-append view-path "/" template-file)))))
+      (lambda (view #!optional (locals '()))
+        (let ((tpl (load-template view)))
+          (template-eval tpl locals))))))
 
 ;; TODO Load these at boot time and check for validity
 
