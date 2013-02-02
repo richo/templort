@@ -1,0 +1,5 @@
+((files "README.md" "templort.meta" "templort.release-info" "templort.scm")
+ (license "MIT")
+ (category web)
+ (author "Richo Healey")
+ (synopsis "barebones templating engine"))
