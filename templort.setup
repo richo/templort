@@ -1,0 +1,6 @@
+;; pilgrim.setup
+;;
+
+(compile -s templort)
+
+(install-extension 'pilgrim "templort.so")
