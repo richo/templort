@@ -1,4 +1,4 @@
-((files "README.md" "templort.meta" "templort.release-info" "templort.scm")
+((files "README.md" "script/cibuild" "templort.meta" "templort.release-info" "templort.scm" "templort.setup" "test.scm" "test/templort.scm" "test/views/complex_data_structures.html" "test/views/count.html" "test/views/escaped_forms.html" "test/views/inline_html.html" "test/views/inline_list_variable.html" "test/views/interpolated_forms.html" "test/views/local_variables.html" "test/views/no_interpolated_forms.html")
  (license "MIT")
  (category web)
  (author "Richo Healey")
