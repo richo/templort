@@ -25,6 +25,8 @@
    (cond
      ((string? el)
       el)
+     ((number? el)
+      (number->string el))
      ((symbol? el)
       (symbol->string el))
      (else
